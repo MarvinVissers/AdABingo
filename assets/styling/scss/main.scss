@@ -141,10 +141,10 @@ html, body {
 /* Bingo card */
 .bingo-card{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-row-gap: 0px;
     min-height: 500px;
     height: auto;
     border: 1px solid var(--tertiaryBackground);
@@ -172,4 +172,17 @@ html, body {
 .bingo-card__item--checked:focus {
     color: var(--mainBackground);
     background-color: var(--mainColor);
+}
+
+/* 
+ * ===========================================================================
+ * Responsive 
+ * ===========================================================================
+ */
+@media only screen and (max-width: 576px) {
+    /* Making the card text smaller */
+    .bingo-card__text {
+        font-size: 12px;
+        word-break: break-word;
+    }
 }

@@ -30,7 +30,7 @@ function loopThroughBingoItems(bingoItems, offset) {
     // Getting the single item id
     var itemId = item.id;
     // Getting the single item span id
-    var bingoItem = document.getElementById(itemId);
+    var bingoItem = document.getElementById("bingoText" + itemId);
 
     // Getting a bingo option
     var bingoOption = getRandomBingoOption();
