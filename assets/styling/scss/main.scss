@@ -65,6 +65,17 @@ html, body {
     background-color: var(--standout);
 }
 
+.bcard {
+    height: auto;
+    transition: all 0.3 ease-in;
+}
+
+.hide {
+    max-height: 0;
+    overflow: hidden;
+    display: none;
+}
+
 /* 
  * ===========================================================================
  * Forms
@@ -123,6 +134,37 @@ html, body {
 
 /* 
  * ===========================================================================
+ * Categorie 
+ * ===========================================================================
+ */
+.categorie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    transition: all 0.25s ease-in;
+    overflow: hidden;
+}
+
+.categorie--hide {
+    max-height: 0vh;
+}
+
+.categorie__list {
+    display: flex;
+    margin: 1.5rem 0 0;
+    padding: 0;
+}
+
+.categorie__item {
+    list-style: none;
+    width: 100px;
+    margin: 0 1rem;
+}
+
+/* 
+ * ===========================================================================
  * Bingo 
  * ===========================================================================
  */
@@ -159,7 +201,8 @@ html, body {
     height: 100%;
     text-align: center;
     padding: 5px;
-    border: 1px solid var(--tertiaryBackground);;
+    border: 1px solid var(--tertiaryBackground);
+    cursor: pointer;
 }
 
 .bingo-card__item:hover,

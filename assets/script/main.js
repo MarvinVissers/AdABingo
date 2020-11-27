@@ -11,12 +11,14 @@ let bingoOpionsChecked = [];
 /**
  * Function to fill the bingo items
  */
-function fillBingoItems() {
+function fillBingoItems(categorie, savedBingoItems) {
     // Getting all bingo card items
     var bingoItems = document.getElementsByClassName("bingo-card__item");
 
     // Filling the items
     loopThroughBingoItems(bingoItems, 0);
+
+    return bingoTextOptionsUsed;
 }
 
 /**
@@ -61,11 +63,12 @@ function getRandomBingoOption() {
 function checkOffItem(id) {
     // Getting the bingoItem
     var bingoItem = document.getElementById(id);
-    // Checking it off
-    if (!bingoItem.classList.contains("bingo-card__item--checked")) {
-        // Checking the item of
-        bingoItem.classList.add("bingo-card__item--checked");
-        // Updating the array
-        bingoOpionsChecked.push(bingoItem.id);
-    }
+
+    bingoItem.classList.toggle("bingo-card__item--checked");
+}
+
+function viewBinogCard() {
+    // Hiding the categorie and showing the bingo card
+    document.getElementById("categorie").classList.add("categorie--hide");
+    document.getElementById("bingoCard").classList.remove("hide");
 }

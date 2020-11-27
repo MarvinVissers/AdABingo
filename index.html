@@ -28,7 +28,20 @@
 
     <body>
         <main class="bingo">
-            <section class="container">
+            <section id="categorie" class="container categorie">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="categorie__title">Kies een categorie</h2>
+    
+                        <ul class="categorie__list">
+                            <li class="categorie__item"><button class="btn-primary" id="school" onclick="showCard('School')">School</button></li>
+                            <li class="categorie__item"><button class="btn-primary" id="online" onclick="showCard('Online')">Online</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bingoCard" class="container bcard hide">
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="bingo__title">ADA Informatica Bingo</h1>
@@ -149,11 +162,23 @@
         </main>
 
         <!-- Linking to javascript -->
+        <script src="assets/script/webstorage.js"></script>
         <script src="assets/script/main.js"></script>
 
         <script>
-            // Filling the bingo items
-            fillBingoItems();
+            // Showing card on categorie choice
+            function showCard(categorie) {                
+                // Showing the bingo card
+                viewBinogCard();
+
+                if (getBingoItems() == null) {
+                    // Filling the bingo items
+                    var bingoItemsUsed = fillBingoItems(categorie, null);
+                    setBingoItems(bingoItemsUsed);
+                } else {
+                    fillBingoItems(categorie, getBingoItems())
+                }
+            }
         </script>
     </body>
 </html>
