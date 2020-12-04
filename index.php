@@ -1,3 +1,11 @@
+<?php
+    require("functions.php");
+
+    $functions = new Functions();
+
+    $listAccounts = $functions->getAccounts();
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -28,6 +36,26 @@
 
     <body>
         <main class="bingo">
+            <section id="categorie" class="container categorie">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="categorie__title">Selecteer je naam</h2>
+        
+                            <form action="" method="post">
+                                <select name="cbxName" class="form-control">
+                                    <?php
+                                        for ($i=0; $i < count($listAccounts); $i++) { 
+                                            ?>
+                                                <option value="<?php echo $listAccounts["name"]; ?>"><?php echo $listAccounts["name"]; ?></option>
+                                            <?php
+                                        }
+                                    ?>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
             <section id="categorie" class="container categorie">
                 <div class="row">
                     <div class="col-sm-12">
