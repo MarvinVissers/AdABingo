@@ -46,7 +46,7 @@
                                     <?php
                                         for ($i=0; $i < count($listAccounts); $i++) { 
                                             ?>
-                                                <option value="<?php echo $listAccounts["name"]; ?>"><?php echo $listAccounts["name"]; ?></option>
+                                                <option value="<?php echo $listAccounts[$i]["name"]; ?>"><?php echo $listAccounts[$i]["name"]; ?></option>
                                             <?php
                                         }
                                     ?>
