@@ -13,7 +13,7 @@
             // Array with names to fill later
             $listAccounts = array();
 
-            $query = "SELECT * FROM account ORDER BY name DESC";
+            $query = "SELECT * FROM account ORDER BY name ASC";
             $stm = $this->conn->prepare($query);
             if ($stm->execute()) {
                 // Getting the results
@@ -24,7 +24,6 @@
                     $accountmodel = array("id" => $account->id, "name" => $account->name, "dayscore" => $account->dayscore, "wins" => $account->wins);
                     array_push($listAccounts, $accountmodel);
                 }
-                var_dump($listAccounts);
                 return $listAccounts;
             }
         }
