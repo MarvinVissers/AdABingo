@@ -8,6 +8,8 @@
  * Basic page styling
  * Forms
  * Buttons
+ * Name
+ * Categorie
  * Bingo
  */
 
@@ -130,6 +132,25 @@ html, body {
     color: var(--mainColor);
     background-color: var(--secondaryBackground);
     border-color: var(--mainColor);
+}
+
+/* 
+ * ===========================================================================
+ * Name 
+ * ===========================================================================
+ */
+ .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    transition: all 0.25s ease-in;
+    overflow: hidden;
+}
+
+.name--hide {
+    max-height: 0vh;
 }
 
 /* 

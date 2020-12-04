@@ -67,6 +67,12 @@ function checkOffItem(id) {
     bingoItem.classList.toggle("bingo-card__item--checked");
 }
 
+function viewCategorie() {
+    // Hiding the name and showing the categories
+    document.getElementById("name").classList.add("name--hide");
+    document.getElementById("categorie").classList.remove("hide");
+}
+
 function viewBinogCard() {
     // Hiding the categorie and showing the bingo card
     document.getElementById("categorie").classList.add("categorie--hide");

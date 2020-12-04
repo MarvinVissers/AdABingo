@@ -36,13 +36,14 @@
 
     <body>
         <main class="bingo">
-            <section id="categorie" class="container categorie">
+            <section id="name" class="container name">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h2 class="categorie__title">Selecteer je naam</h2>
+                            <h2 class="name__title">Selecteer je naam</h2>
         
-                            <form action="" method="post">
-                                <select name="cbxName" class="form-control">
+                            <form action="#" method="post">
+                                <select name="cbxName" class="form-control" onchange="viewCategorie()">
+                                    <option value="" selected="selected"></option>
                                     <?php
                                         for ($i=0; $i < count($listAccounts); $i++) { 
                                             ?>
@@ -56,7 +57,7 @@
                     </div>
                 </section>
 
-            <section id="categorie" class="container categorie">
+            <section id="categorie" class="container categorie hide">
                 <div class="row">
                     <div class="col-sm-12">
                         <h2 class="categorie__title">Kies een categorie</h2>
@@ -187,6 +188,8 @@
                     </div>
                 </div>
             </section>
+
+            <span id="rotop"></span>
         </main>
 
         <!-- Linking to javascript -->

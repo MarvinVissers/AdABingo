@@ -13,7 +13,7 @@
             // Array with names to fill later
             $listAccounts = array();
 
-            $query = "SELECT * FROM account";
+            $query = "SELECT * FROM account ORDER BY name DESC";
             $stm = $this->conn->prepare($query);
             if ($stm->execute()) {
                 // Getting the results
