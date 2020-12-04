@@ -6,6 +6,11 @@ class Database{
     private $db_name = "bingo";
     private $username = "bingo";
     private $password = "W3hf^xzeHy";
+
+    // private $host = "localhost";
+    // private $db_name = "bingo";
+    // private $username = "root";
+    // private $password = "";
     
     public $conn;
   

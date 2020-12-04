@@ -24,7 +24,7 @@
                     $accountmodel = array("id" => $account->id, "name" => $account->name, "dayscore" => $account->dayscore, "wins" => $account->wins);
                     array_push($listAccounts, $accountmodel);
                 }
-
+                var_dump($listAccounts);
                 return $listAccounts;
             }
         }
