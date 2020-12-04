@@ -25,6 +25,7 @@
                     array_push($listAccounts, $accountmodel);
                 }
 
+                var_dump($listAccounts);
                 return $listAccounts;
             }
         }
